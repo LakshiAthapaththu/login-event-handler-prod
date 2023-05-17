@@ -11,7 +11,9 @@ service asgardeo:LoginService on webhookListener {
   
     remote function onLoginSuccess(asgardeo:LoginSuccessEvent event ) returns error? {
       //Not Implemented
+      log:printInfo("--- event log started ---");
       log:printInfo(event.toJsonString());
+      log:printInfo("--- event log ended ---");
     }
 }
 
